@@ -5,16 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealEstateApp.Core.Models
+namespace RealEstateApp.Core.Abstract
 {
-    public class IEntity
+    public interface IEntity
     {
         [Key]
         public int Id { get; set; }
         public DateTime CreateTime { get; set; }
         public DateTime UpdateTime { get; set; }
         public bool IsActive { get; set; }
-        public bool IsActive { get; set; }
+        public bool IsDelete { get; set; }
 
     }
 }

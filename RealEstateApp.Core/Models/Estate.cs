@@ -4,10 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RealEstateApp.Core.Abstract;
 
 namespace RealEstateApp.Core.Models
 {
-    public class Estate:IEntity
+    public class Estate:BaseEntity
     {
         public string Title { get; set; }
         public int BedSize { get; set; }
@@ -15,7 +16,7 @@ namespace RealEstateApp.Core.Models
         public string? Address { get; set; }
         public string? Details { get; set; }
         public string RoomSize { get; set; }
-        public Image Image { get; set; }
+        public List<Image> Images { get; set; }
 
     }
 }
