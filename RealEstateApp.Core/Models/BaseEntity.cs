@@ -10,9 +10,9 @@ namespace RealEstateApp.Core.Models
     public class BaseEntity : IEntity
     {
         public int Id { get; set; }
-        public DateTime CreateTime { get; set; } =DateTime.Now;
+        public DateTime CreateTime { get; set; } =DateTime.UtcNow;
         public DateTime UpdateTime { get; set; }
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
         public bool IsDelete { get; set; }
 
     }
