@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RealEstateApp.Core.Models;
 using RealEstateApp.Repository.Context;
 using RealEstateApp.Repository.Repositories.Abstract;
 using System;
@@ -9,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace RealEstateApp.Repository.Repositories.Concrete
 {
-    public class EntityRepository<T> where T :class, IEntityRepository<T>
+    public class GenericRepository<T> :IGenericRepository<T> where T:class,new()
     {
         private readonly SqlServerDbContext _connection;
        
-        public EntityRepository(SqlServerDbContext connection)
+        public GenericRepository(SqlServerDbContext connection)
         {
             _connection = connection;
         }

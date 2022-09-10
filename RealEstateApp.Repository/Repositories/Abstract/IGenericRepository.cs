@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RealEstateApp.Repository.Repositories.Abstract
 {
-    public interface IEntityRepository<T> where T : class
+    public interface IGenericRepository<T> where T : class,new()
     {
         Task<T> CreateAsync(T entity);
         Task<T> UpdateAsync(int id,T entity);
